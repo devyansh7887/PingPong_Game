@@ -13,13 +13,13 @@ const paddleSound = document.getElementById("paddleSound");
 let gameRunning = false;
 let keysPressed = {};
 let paddle1Speed = 0;
-let paddle1Y = 150;
+let paddle1Y = 100;
 let paddle2Speed = 0;
-let paddle2Y = 150;
-let ballX = 290;
-let ballSpeedX = 2;
-let ballY = 190;
-let ballSpeedY = 2;
+let paddle2Y = 100;
+let ballX = 168;
+let ballSpeedX = 1.5;
+let ballY = 118;
+let ballSpeedY = 1.5;
 let player1Score = 0;
 let player2Score = 0;
 
@@ -27,8 +27,8 @@ let player2Score = 0;
 const paddleAcc = 1;
 const paddleMaxSpeed = 5;
 const paddleDcc = 1;
-const gameHeight = 400;
-const gameWidth = 600;
+const gameHeight = 250;
+const gameWidth = 350;
 
 document.addEventListener("keydown", startGame);
 document.addEventListener('keydown', handleKeyDown);
@@ -157,8 +157,8 @@ function updateScoreboard(){
 function resetBall(){
     ballX = gameWidth / 2 - ball.clientWidth / 2;
     ballY = gameHeight / 2 - ball.clientHeight / 2;
-    ballSpeedX = Math.random() < 0.5 ? 2 : -2; // Randomize initial direction
-    ballSpeedY = Math.random() < 0.5 ? 2 : -2; // Randomize initial direction
+    ballSpeedX = Math.random() < 0.5 ? 1.5 : -1.5; // Randomize initial direction
+    ballSpeedY = Math.random() < 0.5 ? 1.5 : -1.5; // Randomize initial direction
 }
 function pauseGame(){
     gameRunning = false;
